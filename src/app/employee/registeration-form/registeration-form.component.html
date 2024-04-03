@@ -1,0 +1,68 @@
+
+
+
+<!--start card Form -->
+<div class="cardForm">
+    
+    <form [formGroup]="cardForm" (ngSubmit) = 'HandleAddToCard()'>
+
+        <div class="form-group">
+            
+            <label for="companyName">Company Name</label>
+            <input formControlName ='companyName' type="text" id = "companyName">
+
+            <div *ngIf = "cardForm.get('companyName')?.errors !=null && cardForm.get('companyName')?.touched"class="alert">
+
+                <p *ngIf = "cardForm.get('companyName')?.errors?.['required']">Company is required</p>
+                <p *ngIf = "cardForm.get('companyName')?.errors?.['minlength']">Company min length is 3</p>
+                <p *ngIf = "cardForm.get('companyName')?.errors?.['maxlength']">Company max length is 15</p>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="employeeName">Employee Name</label>
+            <input formControlName = 'employeeName' type="text" id = "employeeName">
+            <div *ngIf = "cardForm.get('employeeName')?.errors !=null && cardForm.get('employeeName')?.touched" class="alert">
+
+                <p *ngIf = "cardForm.get('employeeName')?.errors?.['required']">Employee is required</p>
+                <p *ngIf = "cardForm.get('employeeName')?.errors?.['minlength']">Employee min length is 3</p>
+                <p *ngIf = "cardForm.get('employeeName')?.errors?.['maxlength']">Employee max length is 15</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="idNo">Employee Id</label>
+            <input formControlName = 'idNo' type="number" id = "idNo" min="1">
+
+            <div *ngIf = "cardForm.get('idNo')?.errors !=null && cardForm.get('idNo')?.touched" class="alert">
+
+                <p *ngIf = "cardForm.get('idNo')?.errors?.['required']">Employee Id is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Dop">Date</label>
+            <input formControlName='Dop' type="date" id = "Dop">
+
+            <div *ngIf = "cardForm.get('Dop')?.errors !=null && cardForm.get('Dop')?.touched" class="alert">
+
+                <p *ngIf = "cardForm.get('Dop')?.errors?.['required']">Starting Date is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input formControlName = 'email' type="email" id = "email">
+
+            <div *ngIf = "cardForm.get('email')?.errors !=null && cardForm.get('email')?.touched" class="alert">
+
+                <p *ngIf = "cardForm.get('email')?.errors?.['required']">Employee email is required</p>
+                <p *ngIf = "cardForm.get('email')?.errors?.['email']">Employee email must be valid</p>
+            </div>
+        </div>
+
+        <button [disabled]='cardForm.invalid' class ='add-to-card' type="submit">Add To Card</button>
+    </form>
+
+</div> <!--start card Form -->
+

@@ -1,0 +1,63 @@
+
+
+
+<!-- start card -->
+<div class="flip-card" (click)="toggleFlip()">
+    <div class="flip-card-inner" [class.flip-card-inner-clicked]="isFlipped">
+        <!--start forward -->
+      <div class="flip-card-front">
+            <div class="personal-info">
+                   <div>
+                        <img src="../../assets/khaled.jpg" alt="khaled's photo">
+                        <h4>Khaled Elgamely</h4>
+                        <p>Software Engineer</p>
+                   </div>
+            </div>
+            <div class="Employee-data" >
+                <div class="employee-data-content">
+                    <div>
+                        <p>ID NO</p> 
+                        <p>DOB</p>
+                        <p>Em Name</p>
+                        <p>E-mail</p>
+                    </div> 
+                    <div>
+                        <p> :{{__sharedService.employeeData?.idNo}}</p> 
+                        <p> :{{__sharedService.employeeData?.Dop}}</p>
+                        <p> :{{__sharedService.employeeData?.employeeName}}</p>
+                        <p> :{{__sharedService.employeeData?.email}}</p>
+                    </div> 
+                </div>
+                <div>
+                    <img src="../../assets/Barcode.jpg" alt="">
+                </div>
+            </div>
+            <div class="last-div"></div>
+      </div><!--end forward -->
+
+        <!--start backward -->
+      <div class="flip-card-back">
+        <div class="company-info">
+            <div>
+                <img src="../../assets/khaled.jpg" alt="khaled's photo">
+                <h4>Company Name</h4>
+                <p>MinTorches</p>
+            </div>
+        </div>
+        <div class="terms-conditions" >
+            <div class="company-data-content">
+                <h3>Terms & Conditions</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi omnis at maxime dolores numquam?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, molestiae?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam aliquam dicta.</p>
+            </div>
+            <div class="company-info-date">
+                <p><span>Date Of Issue</span> :10/3/2021</p>
+                <p><span>Expire Date</span> :20/6/2022</p>
+            </div>
+        </div>
+        <div class="last-div"></div>
+      </div><!--end backward -->
+    </div>
+</div><!-- end card -->
+

@@ -1,0 +1,58 @@
+label {
+    margin-bottom: 5px;
+}
+
+.alert p {
+    background-color: rgb(245, 146, 146);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.cardForm {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.cardForm form {
+    padding: 13px;
+    font-size: 20px;
+}
+
+.form-group {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #fff !important;
+}
+
+
+.form-group label {
+    font-size: 18px;
+}
+
+.add-to-card {
+    padding: 15px;
+    margin-top: 13px;
+    background-color: rebeccapurple;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
